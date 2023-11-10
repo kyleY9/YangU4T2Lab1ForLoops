@@ -18,7 +18,7 @@ public class StringLoops
       */
     public int countCharacters(String character, String searchString) {
         int numAppearances = 0;
-        for (int i = 0; i > searchString.length(); i++) {
+        for (int i = 0; i < searchString.length(); i++) {
             String currentChar = searchString.substring(i, i + 1);
             if ((currentChar.toUpperCase()).equals(character.toUpperCase())) {
                 numAppearances++;
@@ -33,7 +33,11 @@ public class StringLoops
      - if origString = "hello!" this method returns "!olleh"
      - if origString = "Apples and bananas" this method returns "sananab dna selppA"
     */
-    //public String reverseString(String origString) {
-    /* to be implemented */
-    //}
+    public String reverseString(String origString) {
+    String reverse = "";
+    for (int i = origString.length(); i > 0; i--) {
+        reverse += origString.substring(i - 1, i);
+    }
+    return reverse;
+    }
 }
